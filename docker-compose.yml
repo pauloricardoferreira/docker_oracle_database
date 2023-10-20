@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  oracle:
+    image: container-registry.oracle.com/database/free:latest
+    container_name: oracle_db
+    volumes:
+      - ./db:/opt/oracle/oradata
+    ports:
+      - 1521:1521
